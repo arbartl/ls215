@@ -54,7 +54,9 @@ function compareVersions(version1, version2) {
     version2.split(".").map(Number),
   ];
 
-  for (let i = 0; i < v1Array.length; i += 1) {
+  let maxLength = Math.max(v1Array.length, v2array.length);
+
+  for (let i = 0; i < maxLength; i += 1) {
     let value1 = v1Array[i] || 0;
     let value2 = v2array[i] || 0;
 
